@@ -1,0 +1,221 @@
+TMTUploadHelper2
+v6
+r1
+cCheck dependencies
+cCompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper2 normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c00000000534730E100000000000000AA
+t1397174497
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c00000000527197D0000000000000044C
+t1383176144
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531F467200000000000001DE
+t1394558578
+s478
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c00000000527197D0000000000000253C
+t1383176144
+s9532
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531F467200000000000C9E38
+t1394558578
+s826936
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m
+c00000000538E3CD10000000000000144
+t1401830609
+s324
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o
+t1401841112
+s2872
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MTUploadHelper2.LinkFileList
+c00000000538E65D70000000000000290
+t1401841111
+s656
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o
+t1401841112
+s14212
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o
+t1401841112
+s35804
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper2
+t2
+s0
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m
+c00000000538E5E9C0000000000000142
+t1401839260
+s322
+
+N/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m
+c00000000538E60180000000000000367
+t1401839640
+s871
+
+CBuild AST from /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m
+r0
+
+CBuild AST from /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m
+r0
+
+CBuild AST from /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies9258ba579d3eb941^98c2bf579d3eb941^-485"warning: no rule to process file '/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.h' of type sourcecode.c.h for architecture i3863(21%IDEActivityLogMessage2@157"Warning: no rule to process file '/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.h' of type sourcecode.c.h for architecture i386-423533911#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@167"Warning: no rule to process file '/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.h' of type sourcecode.c.h for architecture i386-423533911#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@158"Warning: no rule to process file '/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.h' of type sourcecode.c.h for architecture i386-423533911#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"6F19ED42-B2C6-4878-A375-F804A491355E-
+
+CCompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s423533911.747896
+e423533912.103359
+r1
+xCompileC
+xDerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o
+x/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m241"CompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9694bf579d3eb941^75761a589d3eb941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m0000000000000000^3772"CompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-generated-files.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-own-target-headers.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-all-target-headers.hmap -iquote /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-project-headers.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/DerivedSources/i386 -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/DerivedSources -F/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac -MMD -MT dependencies -MF /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.d --serialize-diagnostics /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.dia -c /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/AppDelegate.m -o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o36"5E956684-D2DF-4574-924C-9FDEEB194619-
+b591BEE8D-33E5-4AF0-90BE-43221EB4513C
+
+CCompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s423533911.747329
+e423533912.104842
+r1
+xCompileC
+xDerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o
+x/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m239"CompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o MainWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2e8dbf579d3eb941^2cd81a589d3eb941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m0000000000000000^3766"CompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o MainWindow.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-generated-files.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-own-target-headers.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-all-target-headers.hmap -iquote /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-project-headers.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/DerivedSources/i386 -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/DerivedSources -F/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac -MMD -MT dependencies -MF /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.d --serialize-diagnostics /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.dia -c /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.m -o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o36"F054F99A-2AB1-4280-903D-606140A20F98-
+b591BEE8D-33E5-4AF0-90BE-43221EB4513C
+
+CCompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s423533911.747508
+e423533912.185751
+r1
+xCompileC
+xDerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o
+x/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m259"CompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o MainWindowController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler488bbf579d3eb941^158f2f589d3eb941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m0000000000000000^3826"CompileC DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o MainWindowController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-generated-files.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-own-target-headers.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-all-target-headers.hmap -iquote /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/MTUploadHelper2-project-headers.hmap -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/DerivedSources/i386 -I/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/DerivedSources -F/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac -MMD -MT dependencies -MF /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.d --serialize-diagnostics /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.dia -c /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindowController.m -o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o36"409BF5AB-A309-432D-BAE8-666D61B2BE23-
+b591BEE8D-33E5-4AF0-90BE-43221EB4513C
+
+CCompileXIB /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainMenu.xib
+r0
+
+CCompileXIB /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/MainWindow.xib
+r0
+
+CCopyPlistFile /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/Resources/Info.plist Info.plist
+r0
+
+CLd /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper2 normal i386
+s423533912.186850
+e423533912.301460
+r0
+xLd
+x/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper2
+xnormal
+xi386
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MTUploadHelper2.LinkFileList
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindow-A6446DED859DE3BC.o
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MainWindowController-5779F9794FA5A9FD.o
+d/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/AppDelegate-C6E349E7463CEDD9.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.eprintf.a
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/CoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+oUndefined symbols for architecture i386:
+o  "_main", referenced from:
+o     implicit entry/start for main executable
+old: symbol(s) not found for architecture i386
+oclang: error: linker command failed with exit code 1 (use -v to see invocation)
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection171"Link /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper2116"Ld DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper2 normal i386bde42f589d3eb941^562d4d589d3eb941^-241"Undefined symbols for architecture i386:  "_main", referenced from:     implicit entry/start for main executableld: symbol(s) not found for architecture i386clang: error: linker command failed with exit code 1 (use -v to see invocation)4(21%IDEActivityLogMessage2@25""_main", referenced from:-423533912#41#28#-2#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--2@40"Implicit entry/start for main executable-423533912#69#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@41"Symbol(s) not found for architecture i386-423533912#115#46#-0#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#31"Apple Mach-O Linker (ld) Notice--2@65"Linker command failed with exit code 1 (use -v to see invocation)-423533912#161#80#-2#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#30"Apple Mach-O Linker (ld) Error--0#0#1#--1418"Ld DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper2 normal i386    cd /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac -F/Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac -filelist /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MTUploadHelper2.LinkFileList -mmacosx-version-min=10.9 -fobjc-link-runtime -framework Cocoa -framework Foundation -Xlinker -dependency_info -Xlinker /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Intermediates/MTUploadHelper2.build/MonoMac/MTUploadHelper2.build/Objects-normal/i386/MTUploadHelper2_dependency_info.dat -o /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app/Contents/MacOS/MTUploadHelper236"E3E7BCCA-B0B6-445E-91AC-8607F5217F5F-
+b591BEE8D-33E5-4AF0-90BE-43221EB4513C
+
+CTouch /Users/Jeff/Projects/MTUploadHelper2/MTUploadHelper2/obj/Xcode/5/DerivedData/MTUploadHelper2/Build/Products/MonoMac/MTUploadHelper2.app
+r0
+
