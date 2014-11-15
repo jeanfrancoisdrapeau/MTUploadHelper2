@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTUploadHelper2", "MTUploadHelper2\MTUploadHelper2.csproj", "{350BEAD9-9DF5-4846-B726-80C09B6024C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libdelugeclient-sharp", "..\..\Downloads\libdelugeclient-sharp-master\libdelugeclient-sharp-master\libdelugeclient-sharp\libdelugeclient-sharp.csproj", "{DB06A55C-89FF-46A9-ABE5-D9F095C6B740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,8 +18,19 @@ Global
 		{350BEAD9-9DF5-4846-B726-80C09B6024C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{350BEAD9-9DF5-4846-B726-80C09B6024C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{350BEAD9-9DF5-4846-B726-80C09B6024C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB06A55C-89FF-46A9-ABE5-D9F095C6B740}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{DB06A55C-89FF-46A9-ABE5-D9F095C6B740}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{DB06A55C-89FF-46A9-ABE5-D9F095C6B740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB06A55C-89FF-46A9-ABE5-D9F095C6B740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB06A55C-89FF-46A9-ABE5-D9F095C6B740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB06A55C-89FF-46A9-ABE5-D9F095C6B740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = MTUploadHelper2\MTUploadHelper2.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		version = 2.1.2
 	EndGlobalSection
 EndGlobal

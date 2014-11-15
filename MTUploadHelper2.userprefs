@@ -1,8 +1,11 @@
-﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="2014-06-04 1:27:40 PM">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MTUploadHelper2/MainWindowController.cs">
+﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="2014-11-15 2:19:54 AM" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MTUploadHelper2/Info.plist">
     <Files>
-      <File FileName="MTUploadHelper2/MainWindowController.cs" Line="534" Column="3" />
+      <File FileName="MTUploadHelper2/MainWindowController.cs" Line="1" Column="1" />
+      <File FileName="MTUploadHelper2/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="MTUploadHelper2/Info.plist" />
+      <File FileName="MTUploadHelper2/Classes/FormUpload.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

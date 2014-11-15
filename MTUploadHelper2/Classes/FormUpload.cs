@@ -37,12 +37,17 @@ namespace MTUploadHelper2
 			request.CookieContainer = cook;
 			request.ContentLength = formData.Length;
 
+			request.ServicePoint.ConnectionLimit = 10;
+			request.KeepAlive = false;
+			request.Timeout = 30000;
+			request.ReadWriteTimeout = 30000;
+
 			// You could add authentication here as well if needed:
 			// request.PreAuthenticate = true;
 			// request.AuthenticationLevel = System.Net.Security.AuthenticationLevel.MutualAuthRequested;
 			// request.Headers.Add("Authorization", "Basic " + Convert.ToBase64String(System.Text.Encoding.Default.GetBytes("username" + ":" + "password")));
 
-			Console.WriteLine (System.Text.Encoding.Default.GetString(formData));
+			//Console.WriteLine (System.Text.Encoding.Default.GetString(formData));
 
 			// Send the form data to the request.
 			using (Stream requestStream = request.GetRequestStream())
@@ -51,7 +56,11 @@ namespace MTUploadHelper2
 				requestStream.Close();
 			}
 
-			return request.GetResponse() as HttpWebResponse;
+			HttpWebResponse resp = request.GetResponse() as HttpWebResponse;
+
+			resp.Close ();
+
+			return resp;
 		}
 
 		private static byte[] GetMultipartFormData(Dictionary<string, object> postParameters, string boundary)
@@ -92,6 +101,9 @@ namespace MTUploadHelper2
 							param.Key,
 							s);
 						formDataStream.Write(encoding.GetBytes(postData), 0, encoding.GetByteCount(postData));
+
+						if (needsCLRF)
+							formDataStream.Write(encoding.GetBytes("\r\n"), 0, encoding.GetByteCount("\r\n"));
 					}
 				}
 				else

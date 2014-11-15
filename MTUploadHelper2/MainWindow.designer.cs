@@ -25,7 +25,19 @@ namespace MTUploadHelper2
 		MonoMac.AppKit.NSButton btnMTEnqueue { get; set; }
 
 		[Outlet]
+		MonoMac.AppKit.NSButton btnMTRemAll { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSButton btnMTRemSel { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSButton btnMTRemUpl { get; set; }
+
+		[Outlet]
 		MonoMac.AppKit.NSButton btnOpenInBrowser { get; set; }
+
+		[Outlet]
+		MonoMac.AppKit.NSComboBox cmbDelugeServer { get; set; }
 
 		[Outlet]
 		MonoMac.AppKit.NSPopUpButton cmbMASResults { get; set; }
@@ -73,6 +85,9 @@ namespace MTUploadHelper2
 		MonoMac.AppKit.NSTextField txtMTUserName { get; set; }
 
 		[Outlet]
+		MonoMac.AppKit.NSTextField txtPathOnServer { get; set; }
+
+		[Outlet]
 		MonoMac.AppKit.NSTextField txtReleaseGroup { get; set; }
 
 		[Outlet]
@@ -92,24 +107,9 @@ namespace MTUploadHelper2
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lstQueueLog != null) {
-				lstQueueLog.Dispose ();
-				lstQueueLog = null;
-			}
-
-			if (txtMTUserName != null) {
-				txtMTUserName.Dispose ();
-				txtMTUserName = null;
-			}
-
-			if (txtMTPassword != null) {
-				txtMTPassword.Dispose ();
-				txtMTPassword = null;
-			}
-
-			if (btnMTDoUpload != null) {
-				btnMTDoUpload.Dispose ();
-				btnMTDoUpload = null;
+			if (txtPathOnServer != null) {
+				txtPathOnServer.Dispose ();
+				txtPathOnServer = null;
 			}
 
 			if (btnMASSearch != null) {
@@ -122,14 +122,39 @@ namespace MTUploadHelper2
 				btnMTBuildFinalDescrip = null;
 			}
 
+			if (btnMTDoUpload != null) {
+				btnMTDoUpload.Dispose ();
+				btnMTDoUpload = null;
+			}
+
 			if (btnMTEnqueue != null) {
 				btnMTEnqueue.Dispose ();
 				btnMTEnqueue = null;
 			}
 
+			if (btnMTRemAll != null) {
+				btnMTRemAll.Dispose ();
+				btnMTRemAll = null;
+			}
+
+			if (btnMTRemSel != null) {
+				btnMTRemSel.Dispose ();
+				btnMTRemSel = null;
+			}
+
+			if (btnMTRemUpl != null) {
+				btnMTRemUpl.Dispose ();
+				btnMTRemUpl = null;
+			}
+
 			if (btnOpenInBrowser != null) {
 				btnOpenInBrowser.Dispose ();
 				btnOpenInBrowser = null;
+			}
+
+			if (cmbDelugeServer != null) {
+				cmbDelugeServer.Dispose ();
+				cmbDelugeServer = null;
 			}
 
 			if (cmbMASResults != null) {
@@ -157,6 +182,11 @@ namespace MTUploadHelper2
 				lstQueue = null;
 			}
 
+			if (lstQueueLog != null) {
+				lstQueueLog.Dispose ();
+				lstQueueLog = null;
+			}
+
 			if (txtMasSearchString != null) {
 				txtMasSearchString.Dispose ();
 				txtMasSearchString = null;
@@ -182,6 +212,11 @@ namespace MTUploadHelper2
 				txtMTNfoFile = null;
 			}
 
+			if (txtMTPassword != null) {
+				txtMTPassword.Dispose ();
+				txtMTPassword = null;
+			}
+
 			if (txtMTTags != null) {
 				txtMTTags.Dispose ();
 				txtMTTags = null;
@@ -190,6 +225,11 @@ namespace MTUploadHelper2
 			if (txtMTTitle != null) {
 				txtMTTitle.Dispose ();
 				txtMTTitle = null;
+			}
+
+			if (txtMTUserName != null) {
+				txtMTUserName.Dispose ();
+				txtMTUserName = null;
 			}
 
 			if (txtReleaseGroup != null) {

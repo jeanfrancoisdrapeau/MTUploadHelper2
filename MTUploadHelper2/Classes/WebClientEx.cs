@@ -5,28 +5,38 @@ namespace MTUploadHelper2
 {
 	public class WebClientEx : WebClient
 	{
-		public CookieContainer CookieContainer { get; private set; }
-
-		public WebClientEx()
+		public WebClientEx(CookieContainer container)
 		{
-			CookieContainer = new CookieContainer();
+			this.container = container;
 		}
+
+		private readonly CookieContainer container = new CookieContainer();
 
 		protected override WebRequest GetWebRequest(Uri address)
 		{
-			string procName = "GetWebRequest";
-
-			try
+			WebRequest r = base.GetWebRequest(address);
+			var request = r as HttpWebRequest;
+			if (request != null)
 			{
-				var request = base.GetWebRequest(address);
-				if (request is HttpWebRequest)
-				{
-					(request as HttpWebRequest).CookieContainer = CookieContainer;
-				}
-				return request;
-			} catch (Exception ex) {
-				Console.WriteLine (string.Format("ERROR: [{0}]: {1}", procName, ex.Message));
-				return null;
+				request.CookieContainer = container;
+			}
+			return r;
+		}
+
+		protected override WebResponse GetWebResponse(WebRequest request)
+		{
+			WebResponse response = base.GetWebResponse(request);
+			ReadCookies(response);
+			return response;
+		}
+
+		private void ReadCookies(WebResponse r)
+		{
+			var response = r as HttpWebResponse;
+			if (response != null)
+			{
+				CookieCollection cookies = response.Cookies;
+				container.Add(cookies);
 			}
 		}
 	}

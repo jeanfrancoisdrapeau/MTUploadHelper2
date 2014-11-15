@@ -6,9 +6,11 @@ using System.Linq;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Xml.Serialization;
 using MonoMac.Foundation;
 using MonoMac.AppKit;
 using Newtonsoft.Json;
+using CodeRinseRepeat.Deluge;
 
 namespace MTUploadHelper2
 {
@@ -66,6 +68,10 @@ namespace MTUploadHelper2
 			btnMTEnqueue.Activated += event_btnMTEnqueue_Activated;
 			btnMTDoUpload.Activated += event_btnMTDoUpload_Activated;
 
+			btnMTRemAll.Activated += event_btnMTRemAll_Activated;
+			btnMTRemSel.Activated += event_btnMTRemSel_Activated;
+			btnMTRemUpl.Activated += event_btnMTRemUpl_Activated;
+
 			cmbMASResults.RemoveAllItems ();
 
 			NSTableView tblViewLogInput = lstPrepareLog.DocumentView as NSTableView;
@@ -76,6 +82,8 @@ namespace MTUploadHelper2
 
 			NSTableView tblViewLogQueue = lstQueueLog.DocumentView as NSTableView;
 			tblViewLogQueue.DataSource = new LogDataSource();
+
+			loadQueue ();
 		}
 
 		private void event_txtReleaseTorrentFile_Changed(object sender, EventArgs e)
@@ -150,6 +158,22 @@ namespace MTUploadHelper2
 
 				txtMTTitle.StringValue = _releaseInfo.releaseName + 
 					" [Intel:"+ crackType +"] ["+ _releaseInfo.releaseVersion +"]";
+
+				// Try to get the NFO file
+				if (!string.IsNullOrEmpty(txtReleaseTorrentFile.StringValue))
+				{
+					string pathAndFile = Path.GetDirectoryName(txtReleaseTorrentFile.StringValue) + @"/" +
+						Path.GetFileNameWithoutExtension(txtReleaseTorrentFile.StringValue) + @"/" ;
+
+					List<string> files = Directory
+						.GetFiles(pathAndFile, "*.*")
+						.Where(file => file.ToLower().EndsWith("nfo"))
+						.ToList();
+
+					if (files.Count != 0)
+						txtMTNfoFile.StringValue = files.First();
+				}
+
 			} catch (Exception ex) {
 				Console.WriteLine (string.Format("ERROR: [{0}]: {1}", procName, ex.Message));
 			}
@@ -221,6 +245,9 @@ namespace MTUploadHelper2
 		{
 			string procName = "event_btnMTDoUpload_Activated";
 
+			CookieContainer container = new CookieContainer();
+			WebClientEx client = new WebClientEx (container);
+
 			try
 			{
 				addQueueLog (DateTime.Now, "[UPLOAD] Starting upload...");
@@ -233,20 +260,14 @@ namespace MTUploadHelper2
 
 				addQueueLog (DateTime.Now, "[UPLOAD] Connecting and authenticating...");
 
-				WebClientEx client = new WebClientEx ();
-
 				var values = new NameValueCollection {
 					{ "username", txtMTUserName.StringValue },
 					{ "password", txtMTPassword.StringValue },
+					{ "login", "Log in"}
 				};
 
 				// Authenticate
-				try {
-					client.UploadValues ("https://mac-torrents.me/login.php", values);
-				} catch (System.Net.WebException) {
-					addQueueLog (DateTime.Now, "[UPLOAD] !! ERROR !! Unable to log in.");
-					return;
-				}
+				client.UploadValues ("https://mac-torrents.me/login.php", values);
 
 				string tempResponse = client.DownloadString ("https://mac-torrents.me/upload.php");
 
@@ -254,85 +275,145 @@ namespace MTUploadHelper2
 				int indexSearchFor = tempResponse.IndexOf (searchFor) + searchFor.Length;
 				string authString = tempResponse.Substring (indexSearchFor, 32);
 
-				CookieContainer cookieCont = client.CookieContainer;
-
-				foreach (Queue.QueueDetail qd in _uploadQueue.queueList)
+				if (_uploadQueue != null)
 				{
-					addQueueLog (DateTime.Now, string.Format("[UPLOAD] Uploading {0}...", qd.appTitle));
-
-					FileInfo fInfo = new FileInfo(qd.torrentFile);
-					long numBytes = fInfo.Length;
-
-					FileStream fStream = new FileStream(qd.torrentFile, FileMode.Open, FileAccess.Read);
-					BinaryReader br = new BinaryReader(fStream);
-
-					FormUpload.FileParameter fp = new FormUpload.FileParameter (br.ReadBytes((int)numBytes),
-						Path.GetFileName (qd.torrentFile),
-						"application/octet-stream");
-
-					br.Close();
-					fStream.Close();
-
-					string releaseType = string.Empty;
-					if (qd.appType == "App")
-						releaseType = "1";
-					if (qd.appType == "Game")
-						releaseType = "2";
-
-					// Upload torrent
-					Dictionary<string, object> paramsDic = new Dictionary<string, object> ();
-					paramsDic.Add ("submit", "true");
-					paramsDic.Add ("auth", authString);
-					paramsDic.Add ("type", releaseType);
-					paramsDic.Add ("title", qd.appTitle);
-					paramsDic.Add ("tags", qd.appTags);
-					paramsDic.Add ("image", qd.appImage);
-					paramsDic.Add ("desc", qd.appDescrip);
-					paramsDic.Add ("file_input", fp);
-
-					if (qd.appVer == "10.6") {
-						paramsDic.Add ("macos[]", new string[] {"1", "2", "3", "4"});
-					}
-					if (qd.appVer == "10.7")
+					foreach (Queue.QueueDetail qd in _uploadQueue.queueList)
 					{
-						paramsDic.Add ("macos[]", new string[] {"2", "3", "4"});
+						addQueueLog (DateTime.Now, string.Format("[UPLOAD] Uploading {0}...", qd.appTitle));
+
+						if (System.IO.File.Exists(qd.torrentFile))
+						{
+							FileInfo fInfo = new FileInfo(qd.torrentFile);
+							long numBytes = fInfo.Length;
+
+							FileStream fStream = new FileStream(qd.torrentFile, FileMode.Open, FileAccess.Read);
+							BinaryReader br = new BinaryReader(fStream);
+
+							FormUpload.FileParameter fp = new FormUpload.FileParameter (br.ReadBytes((int)numBytes),
+								Path.GetFileName (qd.torrentFile),
+								"application/octet-stream");
+
+							br.Close();
+							fStream.Close();
+
+							string releaseType = string.Empty;
+							if (qd.appType == "App")
+								releaseType = "1";
+							if (qd.appType == "Game")
+								releaseType = "2";
+							if (qd.appType == "Other")
+								releaseType = "5";
+							if (qd.appType == "E-Books")
+								releaseType = "6";
+
+							// Upload torrent
+							Dictionary<string, object> paramsDic = new Dictionary<string, object> ();
+							paramsDic.Add ("submit", "true");
+							paramsDic.Add ("auth", authString);
+							paramsDic.Add ("type", releaseType);
+							paramsDic.Add ("title", qd.appTitle);
+							paramsDic.Add ("tags", qd.appTags);
+							paramsDic.Add ("image", qd.appImage);
+							paramsDic.Add ("desc", qd.appDescrip);
+							paramsDic.Add ("file_input", fp);
+
+							if (qd.appVer == "10.6") {
+								paramsDic.Add ("macos[]", new string[] {"1", "2", "3", "4", "5"});
+							}
+							if (qd.appVer == "10.7")
+							{
+								paramsDic.Add ("macos[]", new string[] {"2", "3", "4", "5"});
+							}
+							if (qd.appVer == "10.8")
+							{
+								paramsDic.Add ("macos[]", new string[] {"3", "4", "5"});
+							}			
+							if (qd.appVer == "10.9")
+							{
+								paramsDic.Add ("macos[]", new string[] {"4", "5"});
+							}
+							if (qd.appVer == "10.10")
+							{
+								paramsDic.Add ("macos[]", "5");
+							}
+
+							//Upload torrent
+							HttpWebResponse resp = FormUpload.MultipartFormDataPost (
+								"https://mac-torrents.me/upload.php",
+								"MTUploaderHelper2.NET",
+								paramsDic,
+								container);
+
+							string localFile = Path.GetDirectoryName(qd.torrentFile) + @"/" + Path.GetFileNameWithoutExtension(qd.torrentFile) + "_mt.torrent";
+
+							//from https://mac-torrents.me/torrents.php?id=1886
+							// to  https://mac-torrents.me/torrents.php?action=download&id=1887
+
+							int numIndex = resp.ResponseUri.AbsoluteUri.IndexOf("=");
+							string strNum = resp.ResponseUri.AbsoluteUri.Substring(numIndex + 1);
+							int dlId;
+
+							int.TryParse(strNum, out dlId);
+							dlId += 1;
+							string remoteFile = string.Format("https://mac-torrents.me/torrents.php?action=download&id={0}", dlId);
+
+							addQueueLog (DateTime.Now, string.Format("[UPLOAD] Downloading torrent file {0}...", localFile));
+
+							client.DownloadFile(remoteFile, localFile);
+
+							if (cmbDelugeServer.StringValue.Length != 0 &&
+								txtPathOnServer.StringValue.Length != 0)
+							{
+								addQueueLog (DateTime.Now, string.Format("[DELUGE] Adding torrent {0}...", localFile));
+
+								string host = string.Empty, port = string.Empty, password = string.Empty;
+
+								switch (cmbDelugeServer.StringValue)
+								{
+									case "Pasta":
+									host = @"http://pasta.whatbox.ca";
+									port = "52114";
+									password = "$N0feaR!";
+									break;
+
+									case "Peanut":
+									host = @"http://peanut.whatbox.ca";
+									port = "39092";
+									password = "$N0feaR!";
+									break;
+								}
+
+								var dclient = new DelugeClient (host, int.Parse(port));
+								dclient.Login (password);
+								dclient.AddTorrentFile(localFile, txtPathOnServer.StringValue);
+							}
+								
+							qd.uploadDone = true;
+
+							var tv = lstQueue.DocumentView as NSTableView;
+							var ds = tv.DataSource as QueueDataSource;
+							ds.queueList = _uploadQueue.queueList;
+							tv.ReloadData();
+
+							NSRunLoop.Current.RunUntil(DateTime.Now.AddMilliseconds(10000));
+						} else {
+							addQueueLog (DateTime.Now, string.Format("[UPLOAD] !! ERROR !! {0} not found, skipping.", qd.torrentFile));
+						}
 					}
-					if (qd.appVer == "10.8")
-					{
-						paramsDic.Add ("macos[]", new string[] {"3", "4"});
-					}			
-					if (qd.appVer == "10.9")
-					{
-						paramsDic.Add ("macos[]", "4");
-					}
-
-					//Upload torrent
-					FormUpload.MultipartFormDataPost (
-						"https://mac-torrents.me/upload.php",
-						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) " +
-						"AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36",
-						paramsDic,
-						cookieCont);
-
-					qd.uploadDone = true;
-
-					var tv = lstQueue.DocumentView as NSTableView;
-					var ds = tv.DataSource as QueueDataSource;
-					ds.queueList = _uploadQueue.queueList;
-					tv.ReloadData();
-
-					NSRunLoop.Current.RunUntil(DateTime.Now.AddMilliseconds(1));
 				}
 
 				addQueueLog (DateTime.Now, "[UPLOAD] Logging out...");
-				client.DownloadString ("https://mac-torrents.me/logout.php?auth=" + authString);
-
-				addQueueLog (DateTime.Now, "[UPLOAD] Done.");
-				client.Dispose();
-				client = null;
+				//client.DownloadString ("https://mac-torrents.me/logout.php?auth=" + authString);
 
 			} catch (Exception ex) {
 				Console.WriteLine (string.Format("ERROR: [{0}]: {1}", procName, ex.Message));
+			} finally {
+				client.Dispose ();
+				client = null;
+
+				saveQueue ();
+
+				addQueueLog (DateTime.Now, "[UPLOAD] Done.");
 			}
 		}
 
@@ -397,10 +478,126 @@ namespace MTUploadHelper2
 
 				tv.ReloadData();
 
+				txtReleaseTorrentFile.StringValue = string.Empty;
+				txtReleaseName.StringValue = string.Empty;
+				txtReleaseGroup.StringValue = string.Empty;
+				txtReleaseRegType.StringValue = string.Empty;
+				txtReleaseVersion.StringValue = string.Empty;
+				txtReleaseMulti.StringValue = string.Empty;
+
+				txtMTTitle.StringValue = string.Empty;
+				txtMTTags.StringValue = string.Empty;
+				txtMTImageUrl.StringValue = string.Empty;
+				txtMTDescrip.Value = string.Empty;
+				txtMTNfoFile.StringValue = string.Empty;
+				txtMTFinalDescrip.Value = string.Empty;
+
+				saveQueue();
+
 				addLog(DateTime.Now, "[QUEUE] Done.");
 
 			} catch (Exception ex) {
 				Console.WriteLine (string.Format("ERROR: [{0}]: {1}", procName, ex.Message));
+			}
+		}
+
+		private void event_btnMTRemAll_Activated(object sender, EventArgs e)
+		{
+			addQueueLog(DateTime.Now, "[QUEUE] Creating a new queue...");
+
+			_uploadQueue = null;
+
+			var tv = lstQueue.DocumentView as NSTableView;
+			var ds = tv.DataSource as QueueDataSource;
+			ds.queueList = null;
+
+			tv.ReloadData();
+
+			saveQueue ();
+		}
+
+		private void event_btnMTRemSel_Activated(object sender, EventArgs e)
+		{
+			if (_uploadQueue == null)
+				return;
+
+			addQueueLog(DateTime.Now, "[QUEUE] Removing selected items from queue...");
+
+			var tv = lstQueue.DocumentView as NSTableView;
+			int rowIndex = tv.SelectedRow;
+
+			_uploadQueue.queueList.RemoveAt (rowIndex);
+
+			var ds = tv.DataSource as QueueDataSource;
+			ds.queueList = _uploadQueue.queueList;
+
+			tv.ReloadData();
+
+			saveQueue ();
+		}
+
+		private void event_btnMTRemUpl_Activated(object sender, EventArgs e)
+		{
+			if (_uploadQueue == null)
+				return;
+
+			addQueueLog(DateTime.Now, "[QUEUE] Removing uploaded items from queue...");
+
+			Queue tempQueue = new Queue ();
+
+			foreach (Queue.QueueDetail qd in _uploadQueue.queueList) {
+				if (qd.uploadDone != true) {
+
+					Queue.QueueDetail qa = qd;
+					tempQueue.queueList.Add (qa);
+
+				}
+			}
+
+			_uploadQueue = tempQueue;
+
+			var tv = lstQueue.DocumentView as NSTableView;
+			var ds = tv.DataSource as QueueDataSource;
+			ds.queueList = _uploadQueue.queueList;
+
+			tv.ReloadData();
+
+			saveQueue ();
+		}
+
+		private void saveQueue()
+		{
+			addQueueLog(DateTime.Now, "[QUEUE] Saving queue to file...");
+
+			var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
+			var filename = Path.Combine (documents, "mtuploadhelper2_queue.xml");
+
+			XmlSerializer serializer = new XmlSerializer (typeof(Queue));
+			TextWriter textWriter = new StreamWriter (filename);
+			serializer.Serialize (textWriter, _uploadQueue);
+			textWriter.Close ();
+		}
+
+		private void loadQueue()
+		{
+			addQueueLog(DateTime.Now, "[QUEUE] Restoring queue from file...");
+
+			var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
+			var filename = Path.Combine (documents, "mtuploadhelper2_queue.xml");
+
+			if (System.IO.File.Exists (filename)) {
+				XmlSerializer deserializer = new XmlSerializer (typeof(Queue));
+				TextReader textReader = new StreamReader (filename, Encoding.UTF8);
+				_uploadQueue = (Queue)deserializer.Deserialize (textReader);
+				textReader.Close ();
+
+				if (_uploadQueue != null) {
+					var tv = lstQueue.DocumentView as NSTableView;
+					var ds = tv.DataSource as QueueDataSource;
+					ds.queueList = _uploadQueue.queueList;
+
+					tv.ReloadData ();
+				}
 			}
 		}
 
@@ -488,7 +685,7 @@ namespace MTUploadHelper2
 					"[hide][pre]" +
 					"Option A:\n" +
 					"- Download and install my app\n" +
-					"  https://mac-torrents.me/forums.php?action=viewthread&threadid=64\n" +
+					"  https://mac-torrents.me/forums.php?action=viewthread&threadid=102\n" +
 					"- Make a shortcut to it in the launchpad\n" +
 					"- Drag&drop any Zip or Rar files on the shortcut\n" +
 					"- The app will extract all the files in a new folder\n" +
@@ -522,6 +719,7 @@ namespace MTUploadHelper2
 					"3. Crack\n" +
 					"- Just like 1., but sometimes the crack will need to be applied manually\n" +
 					"- Copy/paste the cracked file(s) in the application folder and overwrite existing files.\n" +
+					"- 'chmod +x' the replaced file just to make sure it's an executable.\n" +
 					"- Done!\n" +
 					"[/pre][/hide]\n\n" +
 					"As always, if you need any help, just PM me!";
